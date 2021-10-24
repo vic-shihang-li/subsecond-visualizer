@@ -1,7 +1,7 @@
 import { NanoSecond } from ".";
-import { NumericHolder } from "./numeric-holder";
+import { TimeValueHolder } from "./time-value-holder";
 
-export class MilliSecond extends NumericHolder {
+export class MilliSecond extends TimeValueHolder {
   constructor(value: number) {
     super(value);
   }

@@ -10,14 +10,12 @@ describe("NanoSecond", () => {
   });
 
   it("should be able to convert to milliseconds", () => {
-    expect(new NanoSecond(35).toMicroSeconds()).toEqual(
+    expect(new NanoSecond(35).toMilliSeconds()).toEqual(
       new MilliSecond(0.000035)
     );
   });
 
   it("should be able to convert to seconds", () => {
-    expect(new NanoSecond(35).toMicroSeconds()).toEqual(
-      new Second(0.000000035)
-    );
+    expect(new NanoSecond(35).toSeconds()).toEqual(new Second(0.000000035));
   });
 });

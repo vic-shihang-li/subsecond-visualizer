@@ -15,6 +15,9 @@ import { MicroSecond, NanoSecond } from "../libs/models";
  * On each transition, show operations that can be done relative to a time unit.
  * e.g. instruction works on nanoseconds, OS has done many multitasking over
  * one second, etc.
+ *
+ * Inspirations:
+ * - https://mkorostoff.github.io/1-pixel-wealth/
  */
 
 const Home: NextPage = () => {

@@ -1,4 +1,4 @@
-import { NanoSecond } from ".";
+import { MicroSecond, NanoSecond, Second } from ".";
 import { TimeValueHolder } from "./time-value-holder";
 
 export class MilliSecond extends TimeValueHolder {
@@ -6,9 +6,15 @@ export class MilliSecond extends TimeValueHolder {
     super(value);
   }
 
-  toNanoSeconds(): NanoSecond {}
+  toNanoSeconds(): NanoSecond {
+    return new NanoSecond(this.value * 1000000);
+  }
 
-  toMicroSeconds(): MicroSecond {}
+  toMicroSeconds(): MicroSecond {
+    return new MicroSecond(this.value * 1000);
+  }
 
-  toSeconds(): Second {}
+  toSeconds(): Second {
+    return new Second(this.value * 0.001);
+  }
 }
